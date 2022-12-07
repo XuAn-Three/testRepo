@@ -1,74 +1,36 @@
-### git操作
+### C语言基础练习题
 
-![image-20221202165646995](C:\Users\W3Cschool\AppData\Roaming\Typora\typora-user-images\image-20221202165646995.png)
+#### 兔子问题（斐波那契数列）
 
-#### 在命令行创建一个新的仓库
+#### 猴子吃桃问题
 
-```
-git init
-git add <file>[所有文件 .]
-git commit -m “注释”
-git branch -M main
-git remote add origin git@github.com:...
-git push -u origin main
-```
-
-#### 在命令行上传已存在的仓库
-
-```
-git remote add origin git@github.com:...
-git branch -M main
-git push -u origin main
-```
-
-#### 从其他仓库导入代码
+#### 数字比大小
 
 
 
-`git init`
+### C语言网络编程
 
-用于在当前目录创建新的 git 仓库。
+#### Web服务工作流程
 
-使用该命令后，当前目录中将会创建一个 `.git` 的子目录，这就是你的 git 仓库。
+1、浏览器客户端访问网页，发送请求包。
 
-所有有关项目的快照数据都存放在这里。
+2、服务器端接收请求包，发响应包，发送相应页面。
 
-`.git` 目录默认是隐藏的。
+3、浏览器客户端接收相应，向服务器发送资源（图片、js、css）请求。
 
+4、服务器端接收请求，发响应包，发送资源回去。
 
+5、浏览器客户端接受资源。
 
-`git add`
+6、用户在页面填写表单提交，发送 POST 请求。
 
-用来将文件添加到暂存区。
+7、服务器接收请求，将 POST 请求发送给 CGI 程序。
 
-一次性可以添加一个或者多个文件夹。
+8、CGI 接收请求，返回的数据交给服务器端。
 
-`git add <file1> <file2>`
+9、服务器端将响应包发送给浏览器客户端。
 
-添加当前目录下的所有文件到暂存区。
-
-`git add .`
-
-
-
-`git status`
-
-查看在你上次提交之后，是否有对文件进行再修改。
-
-可以通过参数 `-s` 获取简单输出。
+10、浏览器客户端接收返回的数据资源。
 
 
 
-`git commit`
-
-该命令是用于将暂存区里面的内容提交到仓库。
-
-`-m` 参数后面加上修改信息注释。
-
-`-a` 参数设置修改文件后不需要执行git add 命令，直接提交到仓库。
-
-在提交之前，需要先设置提交的用户信息：用户名和邮箱
-
-`git config --global user.name "username"`
-
-`git config --global user.email "useremail"`
