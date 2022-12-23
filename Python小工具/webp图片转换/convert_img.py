@@ -40,6 +40,7 @@ def imageConvert():
 
         img = Image.open(webpPath+".webp")
         img.load()
+        img = img.convert("RGB")
         img.save(webpPath + IMG_EXP)
         os.remove(webpPath + '.webp')
 
